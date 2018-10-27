@@ -37,9 +37,13 @@ ddf = ddf1;
 a = 0.0001;
 b = 0.999;
 
-n = 6
+n = 6;
+error = 100;
 
-while error > 0.0001:
+hCur = 0;
+hPrev = 0;
+
+while abs(error) > 0.0001:
     
     
     

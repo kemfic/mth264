@@ -1,7 +1,7 @@
 % 2018 Kemal Ficici
 % MIT License
 
-function out = compositeMid(a, b, dx):    
+function out = compositeMid():    
     g = cat(2, [0;], x);
     g1  =cat(2, x, [0;]);
     
