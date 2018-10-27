@@ -1,4 +1,4 @@
-MATLAB Computer assignments for my Calc II class at nova.
+calc II matlab projects
 ---
 
 TODO
