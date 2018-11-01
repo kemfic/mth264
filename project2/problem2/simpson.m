@@ -1,3 +1,4 @@
+% Problem 1
 % Simpson's rule
 
 clear
@@ -10,9 +11,9 @@ f1 = @(x) (x / sin(x));
 f2 = @(x) ((exp(x)-1)/sin(x)); 
 f3 = @(x) (asin(x)/x);
 
-f = f2; % set which function you want to integrate
+f = f3; % set which function you want to integrate
 a = 0.0000000001;
-b = (pi / 2); % pi/2, 1
+b = 1; % pi/2, 1
 
 simpson = @(x,dx) f(x) + 4*f(x + dx) + f(x + 2*dx);
 n = 8;

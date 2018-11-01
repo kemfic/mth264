@@ -12,9 +12,9 @@ f2 = @(x) ((exp(x)-1)/sin(x));
 f3 = @(x) (asin(x)/x);
 
 % set the function  you want to integrate
-f = f3;
+f = f1;
 a = 0.0000000001;
-b = 1; % pi/2, 1
+b = pi/2; % pi/2, 1
 
 n = 6; % n=8 once we get into the loop
 error = 1;
