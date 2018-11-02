@@ -11,6 +11,11 @@ f1 = @(x) (x / sin(x));
 f2 = @(x) ((exp(x)-1)/sin(x)); 
 f3 = @(x) (asin(x)/x);
 
+% Derivatives of assigned functions
+df1 = @(x) (1-x*cot(x))*csc(x);
+df2 = @(x) ((exp(x)-(exp(x)*cot(x)) + cot(x))*csc(x))
+df3 = @(x) ();
+
 f = f3; % set which function you want to integrate
 a = 0.0000000001;
 b = 1; % pi/2, 1
