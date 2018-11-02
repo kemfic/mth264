@@ -14,7 +14,7 @@ f3 = @(x) (asin(x)/x);
 % Derivatives of assigned functions
 df1 = @(x) (1-x*cot(x))*csc(x);
 df2 = @(x) ((exp(x)-(exp(x)*cot(x)) + cot(x))*csc(x))
-df3 = @(x) ();
+df3 = @(x) (((x/sqrt(1-x^2)) - asin(x))/(x^2));
 
 f = f3; % set which function you want to integrate
 a = 0.0000000001;
