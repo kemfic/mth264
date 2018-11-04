@@ -17,7 +17,7 @@ df2 = @(x) (exp(x) + cot(x) -exp(x)*cot(x))*(csc(x));
 df3 = @(x) ((x/(sqrt(1-x^2)))-asin(x))/(x^2);
 
 
-f = df2; % set which function you want to integrate
+f = df1; % set which function you want to integrate
 arclen = @(x) sqrt(1+(f(x))^2)
 
 a = 0.00000001;
