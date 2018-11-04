@@ -1,3 +1,4 @@
+% Problem 3
 % Composite Midpoint Rule
 
 clear
