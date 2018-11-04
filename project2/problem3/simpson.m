@@ -11,19 +11,14 @@ f1 = @(x) (x / sin(x));
 f2 = @(x) ((exp(x)-1)/sin(x)); 
 f3 = @(x) (asin(x)/x);
 
-% Derivatives of assigned functions
-df1 = @(x) (1-x*cot(x))*csc(x);
-df2 = @(x) (exp(x) + cot(x) -exp(x)*cot(x))*(csc(x));
-df3 = @(x) ((x/(sqrt(1-x^2)))-asin(x))/(x^2);
 
-
-f = df1; % set which function you want to integrate
-arclen = @(x) sqrt(1+(f(x))^2)
+f = f2; % set which function you want to integrate
 
 a = 0.00000001;
 b = pi/2;%0.9999; % pi/2, 0.9999
 
-simpson = @(x,dx) arclen(x) + 4*arclen(x + dx) + arclen(x + 2*dx);
+R = @(x) f(x)^2;
+simpson = @(x,dx) R(x) + 4*R(x + dx) + R(x + 2*dx);
 n = 8;
 H = 0;
 Aold = 0;
@@ -34,7 +29,7 @@ for i = 1:2:n
     H = H+simpson(xL, dx);
 end
 
-Anew = H*dx /3;
+Anew =pi*  H*dx /3;
 error = 1;
 
 rounddown = @(x) floor(x * 10000); % modify this to set how many "correct" decimal places you want
@@ -49,7 +44,7 @@ while error ~= 0
         xL = a+(g-1)*dx;
         H = H+simpson(xL, dx);
     end
-    Anew = H*dx/3;
+    Anew =pi*  H*dx/3;
     error = abs(rounddown(Anew) - rounddown(Aold));
 end
 
