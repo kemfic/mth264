@@ -1,4 +1,4 @@
-%
+% Problem 1
 % Alternative Extended Simpson's Rule
 %
 
