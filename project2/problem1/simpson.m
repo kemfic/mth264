@@ -32,7 +32,7 @@ error = 1;
 rounddown = @(x) floor(x * 10000); % modify this to set how many "correct" decimal places you want
 while error ~= 0 
     % compare how many digits are "incorrect"
-    % Anew -  Aold > 0.0001 doesn't work since 1.00012 and 1.00009 would come out to be true
+    % Anew - Aold  0.0001 doesn't work since 1.00012 and 1.00009 would come out to be true
     Aold = Anew;
     n = n+2;
     dx = (b-a)/n;
