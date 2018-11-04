@@ -1,4 +1,4 @@
-% Problem 1
+% Problem 2
 % Simpson's rule
 
 clear
