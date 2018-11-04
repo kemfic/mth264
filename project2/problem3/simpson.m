@@ -11,11 +11,19 @@ f1 = @(x) (x / sin(x));
 f2 = @(x) ((exp(x)-1)/sin(x)); 
 f3 = @(x) (asin(x)/x);
 
-f = f3; % set which function you want to integrate
-a = 0.0000000001;
-b = 1; % pi/2, 1
+% Derivatives of assigned functions
+df1 = @(x) (1-x*cot(x))*csc(x);
+df2 = @(x) (exp(x) + cot(x) -exp(x)*cot(x))*(csc(x));
+df3 = @(x) ((x/(sqrt(1-x^2)))-asin(x))/(x^2);
 
-simpson = @(x,dx) f(x) + 4*f(x + dx) + f(x + 2*dx);
+
+f = df1; % set which function you want to integrate
+arclen = @(x) sqrt(1+(f(x))^2)
+
+a = 0.00000001;
+b = pi/2;%0.9999; % pi/2, 0.9999
+
+simpson = @(x,dx) arclen(x) + 4*arclen(x + dx) + arclen(x + 2*dx);
 n = 8;
 H = 0;
 Aold = 0;
