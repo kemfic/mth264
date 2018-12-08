@@ -3,6 +3,6 @@ calc II matlab projects
 
 TODO
 ---
-  - Complete project 2
+  - Complete project 3
   - Write report
   - Clean up code
