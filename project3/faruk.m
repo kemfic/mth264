@@ -2,7 +2,7 @@ clc
 clear
 format long
 
-f = @(x) sin(x.^2);
+f = @(x)  (x/sin(x));
 
 n = 1000;
 a = 0;
