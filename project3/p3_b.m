@@ -28,4 +28,4 @@ x = a + I*(b-a);
 y = rando * M;
 mask = y < f(x);
 
-mean(mask)*(M*(b-a))
+MCL_Integral = mean(mask)*(M*(b-a))
