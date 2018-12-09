@@ -12,14 +12,6 @@ f = f1;
 a=0;
 b=pi/2;
 
-numBoxes = [2; 10; 100; 1000; 10000; ];
-
-upperSum = [];
-lowerSum = [];
-midSum = [];
-trapezoidSum = [];
-simpsonSum = [] ;
-
 n = 1000;
 dx = (b-a)/ n;
 
