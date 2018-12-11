@@ -1,0 +1,108 @@
+\documentclass[a4paper12pt,titlepage]{article}
+\usepackage{titling}
+\usepackage[framed,numbered,autolinebreaks,useliterate]{mcode}
+\usepackage{amsmath}
+\usepackage{breqn}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{xunicode}
+\usepackage{unicode-math}
+\usepackage{enumitem}
+\usepackage[margin=2.0cm]{geometry}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\title{\textbf{MTH 264 Project III}}
+
+\author{Kemal Ficici} 
+
+\setcounter{page}{1}
+\begin{document}
+\maketitle
+
+\clearpage
+
+
+\section{Problems}
+
+Use the following methods to approximate definite integrals:
+    \begin{enumerate}
+        \item Bayesian Numerical Integral
+        \item Monte Carlo Integration with Trig Distribution
+    \end{enumerate}
+\textbf{NOTE: } $N = 1000$, repeat 5 times.
+
+\subsection{Functions}
+    Integrate the following functions using the methods listed above.
+    \LARGE{
+        \begin{enumerate}[label=\roman*.]
+
+            \item $\int_{0}^{\pi/2} \sin{x^2} dx$
+            \item $\int_{0}^{\pi/2} \frac{x}{\sin{x}} dx$
+            \item $\int_{0}^{\pi/2} \frac{e^x -1}{\sin{x}} dx$
+        \end{enumerate}
+    }
+\clearpage
+
+\section{Solutions}
+    \subsection{Bayesian Numerical Integral}
+        \normalsize{The Bayesian Numerical Integral method was used to approximate the integrals of the assigned functions. The table below lists the results of 5 runs on each function. The results are relatively consistent with each other, with small variations due to the randomness involved with Bayesian Numerical integration.}
+
+        \begin{table}[h!]
+          \begin{center}
+            \label{tab:table1}
+            \begin{tabular}{|c|c|c|}
+              \toprule
+              \large{\textbf{$\int_{0}^{\pi/2} \sin{x^2} dx$}} & \large{\textbf{$\int_{0}^{\pi/2} \frac{x}{\sin{x}} dx$}} & \large{\textbf{$\int_{0}^{\pi/2} \frac{e^x -1}{\sin{x}} dx$}}\\
+              \hline
+              \normalsize{0.84045118983470} &\normalsize{1.82519731136805} & \normalsize{2.92034205525110}\\
+              \hline              
+              \normalsize{0.81300986203938} &\normalsize{1.82513807323085} & \normalsize{2.87723163838495}\\
+              \hline              
+              \normalsize{0.80562048631475} &\normalsize{1.82775260493337} & \normalsize{2.85772229012692}\\
+              \hline              
+              \normalsize{0.80003778520629} &\normalsize{1.82696575239499} & \normalsize{2.87493520874632}\\
+              \hline              
+              \normalsize{0.83704060284947} &\normalsize{1.83013519198564} & \normalsize{2.82211105757757}\\
+              \hline
+
+            \end{tabular}
+          \end{center}
+        \end{table}
+        
+        \subsection{Monte Carlo Integration}
+        \normalsize{
+        Monte Carlo Integration was used to approximate the integrals of the assigned functions. Instead of using a random distribution, we used a trig distribution in the algorithm. The table below lists the results of 5 runs on each function. }
+
+        \begin{table}[h!]
+          \begin{center}
+            \label{tab:table1}
+            \begin{tabular}{|c|c|c|}
+              \toprule
+              \large{\textbf{$\int_{0}^{\pi/2} \sin{x^2} dx$}} & \large{\textbf{$\int_{0}^{\pi/2} \frac{x}{\sin{x}} dx$}} & \large{\textbf{$\int_{0}^{\pi/2} \frac{e^x -1}{\sin{x}} dx$}}\\
+              \hline
+              \normalsize{0.95969077502208} &\normalsize{1.93637690507613} & \normalsize{2.99868399929463}\\
+              \hline              
+              \normalsize{0.96755709285013} &\normalsize{1.94625637908162} & \normalsize{3.19707021807748}\\
+              \hline              
+              \normalsize{0.97699667424379} &\normalsize{2.00553322311456} & \normalsize{2.86896993316738}\\
+              \hline              
+              \normalsize{0.97070361998135} &\normalsize{1.94625637908162} & \normalsize{3.14365854378979}\\
+              \hline              
+              \normalsize{0.95969077502208} &\normalsize{1.96848519559397} & \normalsize{3.18943997889353}\\
+              \hline
+
+            \end{tabular}
+          \end{center}
+        \end{table}
+
+\clearpage
+\section{Code}
+    \subsection{Bayesian Numerical Integral}
+    \lstinputlisting[firstline=0]{problems/p3_a.m}
+    \clearpage
+    \subsection{Monte Carlo Integration with Trig Distribution}
+    \lstinputlisting[firstline=0]{problems/p3_b.m}
+\end{document}
+
